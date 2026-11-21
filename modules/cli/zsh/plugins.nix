@@ -1,0 +1,15 @@
+{ pkgs, ... }: {
+  home.packages = [
+    pkgs.eza
+  ];
+
+  programs.zsh = {
+    oh-my-zsh = {
+      enable = true;
+      theme = "jonathan";
+      plugins = [
+        "eza"
+      ];
+    };
+  };
+}
