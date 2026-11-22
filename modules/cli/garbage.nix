@@ -1,4 +1,4 @@
-{ ... }: {
+{ config, ... }: {
   programs.nh = {
     enable = true;
 
@@ -9,6 +9,6 @@
   };
 
   home.sessionVariables = {
-    NH_HOME_FLAKE = "/home/user/.config/home-manager";
+    NH_HOME_FLAKE = "${config.home.homeDirectory}/.config/home-manager";
   };
 }

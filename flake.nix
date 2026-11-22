@@ -30,14 +30,21 @@
       nix-flatpak,
       ...
     }@inputs:
+    let
+      user = rec {
+        name = "user";
+        directory = "/home/${name}";
+      };
+    in
     {
-      homeConfigurations."user" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
           system = "x86_64-linux";
           config.allowUnfree = true;
         };
         extraSpecialArgs = {
           inherit inputs;
+          inherit user;
         };
         modules = [
           nix-flatpak.homeManagerModules.nix-flatpak

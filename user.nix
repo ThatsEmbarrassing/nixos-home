@@ -1,4 +1,4 @@
-{ ... }: {
-  home.username = "user";
-  home.homeDirectory = "/home/user";
+{ user, ... }: {
+  home.username = user.name;
+  home.homeDirectory = user.directory;
 }
