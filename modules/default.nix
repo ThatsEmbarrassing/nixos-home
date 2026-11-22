@@ -3,7 +3,6 @@
     ./apps
     ./cli
     ./cosmic
-    ./services
     ./flatpak
 
     ./packages.nix

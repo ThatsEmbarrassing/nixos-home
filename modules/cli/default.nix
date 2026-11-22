@@ -1,8 +1,8 @@
 { ... }: {
   imports = [
-    ./zsh/default.nix
+    ./zsh
+    ./git
 
-    ./git.nix
     ./ssh.nix
     ./btop.nix
     ./garbage.nix
