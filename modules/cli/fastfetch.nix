@@ -3,7 +3,6 @@
     enable = true;
 
     settings = {
-      "$schema" = "https://github.com";
       logo = {
         type = "auto";
       };
