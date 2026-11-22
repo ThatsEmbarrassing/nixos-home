@@ -15,7 +15,7 @@
       };
     };
 
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.8.0";
 
     uniclipboard = {
       url = "github:UniClipboard/UniClipboard/v1.6.2";
