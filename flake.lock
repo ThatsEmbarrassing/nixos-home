@@ -24,27 +24,6 @@
         "type": "github"
       }
     },
-    "disko": {
-      "inputs": {
-        "nixpkgs": [
-          "proxy-suite",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1792526520,
-        "narHash": "sha256-3hSJlv8mUVnZPMWK2+CM7a9O+nR6Z4mCh27NfLCmTPc=",
-        "owner": "nix-community",
-        "repo": "disko",
-        "rev": "cedd626e11b635470fa6f9fdb8ad79b0075dd7f9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "disko",
-        "type": "github"
-      }
-    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
@@ -87,22 +66,6 @@
         "type": "github"
       }
     },
-    "nfqws2-keenetic": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1793867699,
-        "narHash": "sha256-DFswS/Sjr7VJbPGKyG59Or3jFwHFR++nxD68Z7jmEq4=",
-        "owner": "nfqws",
-        "repo": "nfqws2-keenetic",
-        "rev": "0cdd3103ecbb47ccb5d76e3dbbfdb4cbb67a7d10",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nfqws",
-        "repo": "nfqws2-keenetic",
-        "type": "github"
-      }
-    },
     "nix-flatpak": {
       "locked": {
         "lastModified": 1790428548,
@@ -135,37 +98,12 @@
         "type": "github"
       }
     },
-    "proxy-suite": {
-      "inputs": {
-        "disko": "disko",
-        "nfqws2-keenetic": "nfqws2-keenetic",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "z2k": "z2k",
-        "zapret": "zapret"
-      },
-      "locked": {
-        "lastModified": 1794418703,
-        "narHash": "sha256-n/pxUnXiC3BcYzmllmrQa2JXRqXNOQQSxobUb73B2lY=",
-        "owner": "FUFSoB",
-        "repo": "proxy-suite-flake",
-        "rev": "c89a8f8816769514e5725fabbf1231089c8ae438",
-        "type": "github"
-      },
-      "original": {
-        "owner": "FUFSoB",
-        "repo": "proxy-suite-flake",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "cosmic-manager": "cosmic-manager",
         "home-manager": "home-manager",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
-        "proxy-suite": "proxy-suite",
         "uniclipboard": "uniclipboard"
       }
     },
@@ -187,61 +125,6 @@
         "owner": "UniClipboard",
         "ref": "v1.6.2",
         "repo": "UniClipboard",
-        "type": "github"
-      }
-    },
-    "z2k": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1794229057,
-        "narHash": "sha256-TY+qeYjw9HwXIl1mEY+VT6+J4U07S4mzn8cjKccZIow=",
-        "owner": "necronicle",
-        "repo": "z2k",
-        "rev": "5565bc132bdb22cf6dc7cd65c62201b5a0b7cc96",
-        "type": "github"
-      },
-      "original": {
-        "owner": "necronicle",
-        "ref": "z2k-enhanced",
-        "repo": "z2k",
-        "type": "github"
-      }
-    },
-    "zapret": {
-      "inputs": {
-        "nixpkgs": [
-          "proxy-suite",
-          "nixpkgs"
-        ],
-        "zapret-flowseal": "zapret-flowseal"
-      },
-      "locked": {
-        "lastModified": 1793787304,
-        "narHash": "sha256-jRYrj9e9tXlnKhw79PCp80axRG5r80trVXAiIc9rTGk=",
-        "owner": "kartavkun",
-        "repo": "zapret-discord-youtube",
-        "rev": "6bdc5418f71d1980bb00af3c7b3379876b70bdbb",
-        "type": "github"
-      },
-      "original": {
-        "owner": "kartavkun",
-        "repo": "zapret-discord-youtube",
-        "type": "github"
-      }
-    },
-    "zapret-flowseal": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1793782619,
-        "narHash": "sha256-/MjMxKemN5qKbEMEkLzF0jTAlOv4EwnHwmrmWotbqXw=",
-        "owner": "Flowseal",
-        "repo": "zapret-discord-youtube",
-        "rev": "2401b7a13837139b0265632464ba563dddbf80d8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Flowseal",
-        "repo": "zapret-discord-youtube",
         "type": "github"
       }
     }

@@ -15,11 +15,6 @@
       };
     };
 
-    proxy-suite = {
-      url = "github:FUFSoB/proxy-suite-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
     uniclipboard = {
@@ -33,8 +28,6 @@
       nixpkgs,
       home-manager,
       nix-flatpak,
-      proxy-suite,
-      uniclipboard,
       ...
     }@inputs:
     {
