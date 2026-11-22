@@ -13,14 +13,8 @@
       "toml"
     ];
 
-    userSettings = {
-      lsp = {
-        nil = {
-          settings = {
-            command = [ "nixfmt" ];
-          };
-        };
-      };
+    userSettings.languages.Nix.formatter.external = {
+      command = "nixfmt";
     };
   };
 }
