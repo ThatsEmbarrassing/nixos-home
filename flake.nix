@@ -36,14 +36,16 @@
         directory = "/home/${name}";
       };
       arch = "x86_64-linux";
+      pkgs = import nixpkgs {
+        system = arch;
+        config.allowUnfree = true;
+      };
     in
     {
       formatter.${arch} = nixpkgs.legacyPackages.${arch}.nixfmt-rfc-style;
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
-          system = arch;
-          config.allowUnfree = true;
-        };
+        inherit pkgs;
+
         extraSpecialArgs = {
           inherit inputs;
           inherit user;
