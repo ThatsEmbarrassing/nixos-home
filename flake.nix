@@ -42,7 +42,7 @@
       };
     in
     {
-      formatter.${arch} = nixpkgs.legacyPackages.${arch}.nixfmt-rfc-style;
+      formatter.${arch} = pkgs.nixfmt-rfc-style;
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
