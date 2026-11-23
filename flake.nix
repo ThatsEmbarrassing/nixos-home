@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -26,6 +27,7 @@
   outputs =
     {
       nixpkgs,
+      nixpkgs-unstable,
       home-manager,
       nix-flatpak,
       ...
@@ -40,6 +42,10 @@
         system = arch;
         config.allowUnfree = true;
       };
+      unstable = import nixpkgs-unstable {
+        system = arch;
+        config.allowUnfree = true;
+      };
     in
     {
       formatter.${arch} = pkgs.nixfmt-rfc-style;
@@ -50,6 +56,7 @@
           inherit inputs;
           inherit user;
           inherit arch;
+          inherit unstable;
         };
         modules = [
           nix-flatpak.homeManagerModules.nix-flatpak

@@ -1,3 +1,6 @@
 { ... }: {
-  imports = [ ./zed.nix ];
+  imports = [
+    ./gui
+    ./tui
+  ];
 }
