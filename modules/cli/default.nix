@@ -5,6 +5,7 @@
 
     ./ssh.nix
     ./btop.nix
+    ./node.nix
     ./eza.nix
     ./garbage.nix
     ./fastfetch.nix
