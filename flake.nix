@@ -35,17 +35,19 @@
         name = "user";
         directory = "/home/${name}";
       };
+      arch = "x86_64-linux";
     in
     {
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+      formatter.${arch} = nixpkgs.legacyPackages.${arch}.nixfmt-rfc-style;
       homeConfigurations.${user.name} = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
-          system = "x86_64-linux";
+          system = arch;
           config.allowUnfree = true;
         };
         extraSpecialArgs = {
           inherit inputs;
           inherit user;
+          inherit arch;
         };
         modules = [
           nix-flatpak.homeManagerModules.nix-flatpak
