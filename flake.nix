@@ -16,6 +16,14 @@
       };
     };
 
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
+
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.8.0";
 
     uniclipboard = {
@@ -29,6 +37,7 @@
       nixpkgs,
       nixpkgs-unstable,
       home-manager,
+      sops-nix,
       nix-flatpak,
       ...
     }@inputs:
@@ -59,6 +68,7 @@
           inherit unstable;
         };
         modules = [
+          sops-nix.homeManagerModules.sops
           nix-flatpak.homeManagerModules.nix-flatpak
           ./home.nix
         ];

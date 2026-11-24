@@ -1,0 +1,8 @@
+keys:
+  - &admin_user age10ae8cufh9wpe6d2m5z73mxgxfsl3k99c2w8jedxk6n9t4scf6ans5feq7c
+
+creation_rules:
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini|toml)$
+    key_groups:
+      - age:
+          - *admin_user
