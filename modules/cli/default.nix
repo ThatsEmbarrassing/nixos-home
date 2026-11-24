@@ -7,6 +7,7 @@
     ./btop.nix
     ./node.nix
     ./eza.nix
+    ./sops.nix
     ./garbage.nix
     ./fastfetch.nix
     ./direnv.nix
