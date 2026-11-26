@@ -46,14 +46,14 @@
         directory = "/home/${name}";
       };
       arch = "x86_64-linux";
-      pkgs = import nixpkgs {
-        system = arch;
-        config.allowUnfree = true;
-      };
-      unstable = import nixpkgs-unstable {
-        system = arch;
-        config.allowUnfree = true;
-      };
+      pkgsFor =
+        source:
+        import source {
+          system = arch;
+          config.allowUnfree = true;
+        };
+      pkgs = pkgsFor nixpkgs;
+      unstable = pkgsFor nixpkgs-unstable;
     in
     {
       formatter.${arch} = pkgs.nixfmt-rfc-style;
