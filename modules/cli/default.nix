@@ -13,6 +13,6 @@
     ./direnv.nix
     ./fzf.nix
     ./zoxide.nix
-    ./prisma.nix
+    # ./prisma.nix
   ];
 }
