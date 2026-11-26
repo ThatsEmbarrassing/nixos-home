@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ ... }: {
   imports = [
     # GitHub
     (import ./git-forge.nix {
@@ -11,18 +11,9 @@
       host = "gitlab.com";
       keyname = "gitlab";
     })
+
+    ./settings.nix
   ];
 
-  programs.git = {
-    enable = true;
-
-    settings = {
-      user = {
-        name = "Ember";
-        email = "Ember@noreply.local";
-      };
-
-      core.editor = config.home.sessionVariables.EDITOR;
-    };
-  };
+  programs.git.enable = true;
 }
