@@ -8,7 +8,7 @@
     ./node.nix
     ./eza.nix
     ./sops.nix
-    ./garbage.nix
+    ./nh.nix
     ./fastfetch.nix
     ./direnv.nix
     ./fzf.nix
