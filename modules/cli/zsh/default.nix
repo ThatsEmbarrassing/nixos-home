@@ -18,10 +18,5 @@
 
       path = "${config.xdg.configHome}/zsh/.zsh_history";
     };
-
-    envExtra = ''
-      export ZDOTDIR="$HOME/.config/zsh"
-    '';
-
   };
 }
