@@ -24,9 +24,5 @@ in
     openssl
 
     uniclipboardPkg
-
-    sops
-    age
-    ssh-to-age
   ];
 }
