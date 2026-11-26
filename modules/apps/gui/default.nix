@@ -1,3 +1,6 @@
 { ... }: {
-  imports = [ ./zed.nix ];
+  imports = [
+    ./packages.nix
+    ./zed.nix
+  ];
 }
