@@ -9,6 +9,8 @@
 
     init.defaultBranch = "main";
     pull.rebase = true;
+    fetch.prune = true;
+    push.autoSetupRemote = true;
 
     alias = {
       co = "checkout";
