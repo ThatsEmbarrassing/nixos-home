@@ -1,6 +1,9 @@
-{ config, ... }: {
+{ config, ... }:
+let
+  inherit (config.xdg) configHome;
+in
+{
   imports = [
-    ./plugins.nix
     ./aliases.nix
   ];
 
@@ -10,13 +13,13 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    dotDir = "${config.xdg.configHome}/zsh";
+    dotDir = "${configHome}/zsh";
 
     history = {
       size = 10000;
       save = 10000;
 
-      path = "${config.xdg.configHome}/zsh/.zsh_history";
+      path = "${configHome}/zsh/.zsh_history";
     };
   };
 }
