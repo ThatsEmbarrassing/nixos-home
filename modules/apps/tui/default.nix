@@ -3,5 +3,6 @@
     ./packages.nix
     ./sqlit.nix
     ./lazysql.nix
+    ./lazydocker.nix
   ];
 }
