@@ -3,5 +3,6 @@
     ./zsh
 
     ./starship.nix
+    ./zellij.nix
   ];
 }
