@@ -2,6 +2,7 @@
   programs.zed-editor = {
     enable = true;
     mutableUserSettings = true;
+    defaultEditor = true;
 
     extraPackages = with pkgs; [
       nil

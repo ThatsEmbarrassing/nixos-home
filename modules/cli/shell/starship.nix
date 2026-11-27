@@ -13,9 +13,7 @@
         truncate_to_repo = true;
       };
 
-      git_branch.format = {
-        format = "[$symbol[$branch(':$remote_branch')]($style)";
-      };
+      git_branch.format = "[$symbol$branch(:$remote_branch)]($style)";
 
       git_status.format = "([\\[$all_status$ahead_behind\\]]($style))";
 
